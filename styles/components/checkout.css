@@ -1,0 +1,237 @@
+*{
+    text-align: center;
+}
+
+.pay_columns {
+    display: flex;
+}
+
+.col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+}
+
+.col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+    padding: 0 16px;
+}
+
+.pay_details {
+    background-color: var(--clr-light);
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+
+input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid var(--clr-slate400);
+    border-radius: 3px;
+}
+
+label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+}
+
+.pay_btn {
+    background-color: #04AA6D;
+    color: var(--clr-light);
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+    text-align: center;
+}
+
+.pay_btn:hover {
+    background-color: #45a049;
+}
+
+span.price {
+    float: right;
+    color: var(--clr-slate600);
+}
+
+.title{
+   font-size: var(--size-3xl);
+   font-weight: 600; 
+   text-align: center;
+}
+
+.box{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.row-2, .row-1{
+    width: 50%;
+    border: 3px solid var(--clr-slate400);
+    padding: 2rem;
+}
+
+.slt_section{
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.slt_opt{
+    outline: none;
+    padding: 0.2rem;
+}
+
+.row_wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+/* links */
+.option_center{
+    display: flex;
+    background-color: var(--clr-slate400);
+    box-shadow: 5px 5px 10px #383333;
+    padding: 1rem 0;
+}
+
+.row_1{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--clr-light);
+    padding: 2rem;
+}
+    
+.row_1 a{
+    color: var(--clr-slate600);
+}
+
+.row-1 a:hover{
+    color: var(--clr-rose);
+}
+
+.row_2{
+    background-color: var(--clr-light);
+    padding: 2rem;
+    flex: 1;
+}
+
+.delete_btn{
+    border: 2px solid var(--clr-dark);
+    height: 40px;
+    width: 250px;
+    font-size: var(--size-base);
+    font-weight: 500;
+    border-radius: none;
+}
+
+.delete_btn:hover{
+    width: 250px;
+    height: 40px;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    font-size: var(--size-base);
+} 
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+    .pay_columns {
+        flex-direction: column-reverse;
+    }
+    .col-25 {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .option_center{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        font-size: var(--size-sm);
+        padding: 1rem;
+    }
+    .row_2{
+        flex: 1;
+        text-align: center;
+    }
+}
+
+/* md */
+@media (min-width: 768px) {
+    .option_center{
+        background-color: var(--clr-slate400);
+        box-shadow: 5px 5px 10px #383333;
+        padding: 1rem 0;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .pro-row-1{
+        text-align: center;
+        font-size: var(--size-2xl);
+        font-weight: 500;
+    }
+    
+    .page_title{
+        font-size: var(--size-2xl);
+    }
+    
+    .field{
+        border: 2px solid var(--clr-dark);
+        height: 2rem;
+        width: 20rem;
+        margin-left: 0.2rem;
+        padding: 1rem;
+    }
+
+    .row_1 {
+        margin-left: 1rem;
+    }
+    
+    .row_2{
+        margin-right: 1rem;
+    }
+}
+
+/* xs */
+@media (max-width: 475px) {
+    .pay_columns{
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .col-75{
+        padding: 0;
+    }
+
+    .mini_container{
+        width: 100%;
+    }
+
+    .row{
+        padding: 0;
+        width: 100%;
+    }
+}

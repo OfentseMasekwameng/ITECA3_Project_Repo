@@ -1,0 +1,45 @@
+.acc_section{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.nav-item{
+    text-align: center;
+    align-items: center;
+}
+
+.sub-items{
+    display: flex;
+    gap: .3rem;
+}
+
+.acc_pic{
+    height: 25px;
+}
+
+.logout_img{
+    height: 30px;
+}
+
+.sub_btn{
+    display: flex;
+}
+
+/* .nav-up{
+    top: -100px;
+}
+
+.nav-down{
+    top: 0;
+} */
+
+/* xs */
+/* @media (min-width: 300px) {} */
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* @media (min-width: 768px) {} */
+
+/* @media (min-width: 1280px) {} */

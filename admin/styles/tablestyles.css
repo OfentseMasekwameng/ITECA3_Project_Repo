@@ -1,0 +1,30 @@
+table{
+    transform: translate(-50%, -50%);
+    width: 60%;
+    border-collapse: collapse;
+    border-radius: 12px 12px 0 0 ;
+    overflow: hidden;
+    outline: none;
+    box-shadow: 0 2px 12px var(--clr-dark);
+    background-color: #fafafa;
+    text-align: center;
+    color: var(--clr-light);
+}
+
+th, td{
+    padding: .7rem 1rem;
+}
+    
+th{
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+}
+
+td{
+    color: var(--clr-dark);
+}
+
+tbody tr:nth-child(odd){
+    background-color: #e0e0e0;
+}
+

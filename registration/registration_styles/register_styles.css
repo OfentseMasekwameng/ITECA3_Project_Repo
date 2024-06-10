@@ -1,0 +1,147 @@
+html, body{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+}
+
+.register{
+    border: 1px solid var(--clr-dark);
+    position: relative;
+    width: 470px;
+    height: auto;
+    /* background: var(--clr-slate800); */
+    box-sizing: border-box;
+    border-radius: 18px;
+    box-shadow: 6px 10px 20px rgba(0, 0, 0, 0.605);
+}
+
+.container .title{
+    border-radius: 15px 15px 0 0;
+    color: var(--clr-light);
+    font-size: var(--size-4xl);
+    font-weight: 700;
+    text-align: center;
+    user-select: none;
+    background: var(--clr-dark);
+    padding: 1rem;
+}
+
+.container form{
+    padding: 2.1rem 1.8rem 3.1rem 1.8rem;
+}
+
+.field{
+    height: 50px;
+    width: 100%;
+    margin-top: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.field input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: var(--size-xl);
+    border: 3px solid var(--clr-dark);
+    border-radius: 30px;
+    padding-left: 2.1rem;
+    display: flex;
+    align-items: center;
+}
+
+
+.field input::placeholder{
+    color: var(--clr-slate600);
+    /* padding-left: 0.15rem; */
+    font-size: var(--size-xl);
+    font-weight: 400px;
+}
+
+.pass_link{
+    margin-top: 1rem;
+}
+
+.content{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.checkbox label{
+    font: var(--size-lg);
+    font-weight: 500;
+}
+
+.password_link a{
+    font: var(--size-lg);
+    font-weight: 500;
+    color: #1e3ac4;
+}
+
+.password_link a:hover{
+    color: var(--clr-rose);
+}
+
+.field .sign-btn{
+    color: var(--clr-dark);
+    display: inline-block;
+    font: var(--size-xl);
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    height: 100%;
+    padding: 0.5em 1em;
+    width: 100%;    
+    border: 3px solid var(--clr-dark);
+    border-radius: 30px;
+    box-shadow: 4px 10px 20px  rgba(0, 0, 0, 0.596);
+    transition: color 0.4s linear;
+    position: relative;
+}
+
+.sign-btn:hover{
+    color: var(--clr-light);
+    /* border-radius: 30px; */
+    /* transform: translateY(-3px); */
+    /* box-shadow: 0 14px 28px  rgb(65, 88, 208, 0.25), 0 10px 10px rgb(200, 80, 192, 0.22), 0 0 60px -10px var(--clr-indigo); */
+}
+
+.sign-btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-dark);
+    border-radius: 30px;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    transform: scaleX(0);
+}
+
+.sign-btn:hover::before{
+    transform: scaleX(1);
+}
+
+.login_link{
+    margin-top: 1.5rem;
+    font: var(---size-lg);
+    width: 100%;
+    text-align: center;
+}
+
+.login_link a{
+    color: #1e3ac4;
+}
+
+.login_link a:hover{
+    color: var(--clr-rose);
+}

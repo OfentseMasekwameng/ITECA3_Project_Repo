@@ -1,0 +1,106 @@
+<?php
+include_once("includes/connection.php");
+require_once "includes/configSession.inc.php";
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Check if latitude and longitude are set
+function set_location(){
+    global $conn;
+    if (isset($_GET["user_location"])) {
+        $user_id = $_SESSION['user_id'];
+
+        if (isset($_GET['latitude']) && isset($_GET['longitude']) && isset($_SESSION['user_id'])) {
+            $latitude = $_GET['latitude'];
+            $longitude = $_GET['longitude'];
+            $user_id = $_SESSION['user_id'];
+
+            // Check if the user already has a location entry
+            $sql = "SELECT location_id FROM user_location WHERE user_id = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("i", $user_id);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            if ($result->num_rows > 0) {
+                // Update existing location
+                $sql = "UPDATE user_location SET latitude = ?, longitude = ?, updated_at = CURRENT_TIMESTAMP WHERE user_id = ?";
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param("ddi", $latitude, $longitude, $user_id);
+            } else {
+                // Insert new location
+                $sql = "INSERT INTO user_location (user_id, latitude, longitude) VALUES (?, ?, ?)";
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param("idd", $user_id, $latitude, $longitude);
+            }
+
+            if ($stmt->execute()) {
+                echo "<script>Alert('Location data updated successfully.')</script>";
+            } else {
+                echo "Error updating location data: " . $conn->error;
+            }
+        } else {
+            echo '<script>Alert("Location or user ID not provided.")</script>';
+        }
+    }
+
+}
+?>
+
+<h1>Find Users Near Your Location</h1>
+<button onclick="getLocation()">Get Location</button>
+
+<form id="locationForm" action="">
+    <div class="loc_input">
+        <input type="hidden" id="latitude" name="latitude">
+        <input type="hidden" id="longitude" name="longitude">
+        <button type="submit" class="btn" name="loc_btn" id>Get Location</button>
+    </div>
+</form>
+
+<p id="status"></p>
+
+<script>
+    const successCallback = (position) => {
+        console.log(position);
+    };
+
+    const errorCallback = (error) => {
+        console.log(error);
+    };
+
+    navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            document.getElementById('status').innerText = "Getting location...";
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            document.getElementById('status').innerText = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        document.getElementById('latitude').value = position.coords.latitude;
+        document.getElementById('longitude').value = position.coords.longitude;
+        document.getElementById('status').innerText = "Location retrieved. You can now search for nearby users.";
+    }
+
+    function showError(error) {
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+                document.getElementById('status').innerText = "User denied the request for Geolocation.";
+                break;
+            case error.POSITION_UNAVAILABLE:
+                document.getElementById('status').innerText = "Location information is unavailable.";
+                break;
+            case error.TIMEOUT:
+                document.getElementById('status').innerText = "The request to get user location timed out.";
+                break;
+            case error.UNKNOWN_ERROR:
+                document.getElementById('status').innerText = "An unknown error occurred.";
+                break;
+        }
+    }
+</script>

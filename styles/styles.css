@@ -1,0 +1,95 @@
+:root{
+/* themes */
+    --clr-dark: #080b16;
+    --clr-light: rgb(229, 231, 235);
+    --clr-slate400: #94a3b8;
+    --clr-slate600: #475569;
+    --clr-slate800: #1e293b;
+    --clr-rose: #e11d48;
+    --clr-blue: #1e3a8a;
+    --clr-green: rgb(22, 163, 74);
+
+/* sizes */
+    --size-xxs: 0.5rem;
+    --size-xs: 0.75rem;
+    --size-sm: 0.875rem;
+    --size-base: 1rem;
+    --size-lg: 1.125rem;
+    --size-xl: 1.25rem;
+    --size-2xl: 1.5rem;
+    --size-3xl: 1.875rem;
+    --size-4xl: 2.25rem;
+    --size-5xl: 3rem;
+    --size-6xl: 3.75rem;
+    --size-7xl: 4.5rem;
+    --size-8xl: 6rem;
+    --size-9xl: 8rem;
+    --size-10xl: 10rem;
+
+/*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Syne", sans-serif;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+*{
+    margin: 0;
+    line-height: calc(1em + 0.5rem);
+}
+
+body {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+}
+
+button{
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    /* color: inherit; */
+}
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--clr-dark);
+    outline: 1px solid var(--clr-dark);
+}
+
+a{
+    text-decoration: none;
+    color: var(--clr-dark);
+}
+
+a:hover{
+    color: var(--clr-rose);
+}
