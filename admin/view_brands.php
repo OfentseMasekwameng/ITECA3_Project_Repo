@@ -18,7 +18,7 @@ function view_brands_table(){
                 <td>' . htmlspecialchars($brand_id) . '</td>
                 <td>' . htmlspecialchars($brand_title) . '</td>
                 <td><a href="admin.php?edit_brand='.htmlspecialchars($brand_id).'"><i class="fa-solid fa-pen-to-square"></i></a></td>
-                <td><a href="admin.php?delete_brand" type="button" data-toggle="modal" data-target="#exampleModal"><i class="fa-solid fa-trash"></i></a></td>
+                <td><a href="admin.php?delete_brand=-'.htmlspecialchars($brand_id).'" type="button" data-toggle="modal" data-target="#exampleModal"><i class="fa-solid fa-trash"></i></a></td>
             </tr>';
     }
     $get_products->close();

@@ -11,7 +11,7 @@ if (isset($_GET["delete_category"])) {
     $delete_id = $_GET["delete_category"];
 
     // Prepare DELETE statement
-    $delete_data = $conn->prepare("DELETE * FROM categories WHERE category_id = ?");
+    $delete_data = $conn->prepare("DELETE FROM categories WHERE category_id = ?");
     if (!$delete_data) {
         // Handle prepare error
         die('Prepare failed: (' . $conn->errno . ') ' . $conn->error);

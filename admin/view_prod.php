@@ -29,7 +29,7 @@ function view_product_table(){
                 <td>' . htmlspecialchars($products_sold). '</td>
                 <td>' . htmlspecialchars($product_status) . '</td>                
                 <td><a href="admin.php?edit_products='.htmlspecialchars($product_id).'"><i class="fa-solid fa-pen-to-square"></i></a></td>
-                <td><a href="admin.php?delete_products=" type="button" data-toggle="modal" data-target="#exampleModal"><i class="fa-solid fa-trash"></i></a></td>
+                <td><a href="admin.php?delete_products='.htmlspecialchars($product_id).'" type="button" data-toggle="modal" data-target="#exampleModal"><i class="fa-solid fa-trash"></i></a></td>
             </tr>';
     }
     $get_products->close();

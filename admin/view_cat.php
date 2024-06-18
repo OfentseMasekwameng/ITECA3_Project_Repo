@@ -18,7 +18,7 @@ function view_categories_table(){
                 <td>' . htmlspecialchars($category_id) . '</td>
                 <td>' . htmlspecialchars($category_title) . '</td>
                 <td><a href="admin.php?edit_category='.htmlspecialchars($category_id).'"><i class="fa-solid fa-pen-to-square"></i></a></td>
-                <td><a href="admin.php?delete_category" type="button" data-toggle="modal" data-target="#exampleModal"><i class="fa-solid fa-trash"></i></a></td>
+                <td><a href="admin.php?delete_category='.htmlspecialchars($category_id).'" type="button" data-toggle="modal" data-target="#exampleModal"><i class="fa-solid fa-trash"></i></a></td>
             </tr>';
     }
     $get_products->close();
