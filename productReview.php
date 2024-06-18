@@ -1,6 +1,6 @@
 <?php
-include_once("includes/connection.php");
-require_once "includes/configSession.inc.php";
+include_once("coverFolder/connection.php");
+require_once "coverFolder/configSession.inc.php";
 include_once("functions/common.php");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

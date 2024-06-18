@@ -1,6 +1,6 @@
 <?php
-require_once '../includes/config_session.inc.php';
-require_once '../includes/mvc/signup_view.inc.php';
+require_once '../coverFolder/config_session.inc.php';
+require_once '../coverFolder/mvc/signup_view.inc.php';
 ?>
 
 
@@ -21,7 +21,7 @@ require_once '../includes/mvc/signup_view.inc.php';
         <div class="title">
             Signup
         </div>
-        <form action="../includes/signup.inc.php" method="POST">
+        <form action="../coverFolder/signup.inc.php" method="POST">
             <!-- <div class="field">
                 <input type="text" placeholder="Enter your first name" name="first_name">                
              </div>

@@ -1,5 +1,5 @@
 <?php
-require_once "../includes/configSession.inc.php";
+require_once "../coverFolder/configSession.inc.php";
 require_once "loginMVC/loginView.php";
 
 ini_set('display_errors', 1);

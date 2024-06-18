@@ -1,5 +1,5 @@
 <?php
-include_once("includes/connection.php");
+include_once("coverFolder/connection.php");
 
 function store_address($user_id, $street, $city, $state, $country, $postal_code) {
     global $conn;

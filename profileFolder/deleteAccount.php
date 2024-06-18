@@ -1,6 +1,6 @@
 <?php
-include_once("includes/connection.php");
-require_once "includes/configSession.inc.php";
+include_once("coverFolder/connection.php");
+require_once "coverFolder/configSession.inc.php";
 
 function delete_user_account() {
     global $conn;

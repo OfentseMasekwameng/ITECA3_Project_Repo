@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 require_once "../functions/common.php";
-require_once '../includes/configSession.inc.php';
+require_once '../coverFolder/configSession.inc.php';
 
 
 // Check if the request method is POST
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user_ip = get_ip_address();
 
     // Include necessary files
-    require_once '../includes/connection.php';
+    require_once '../coverFolder/connection.php';
     require_once 'signupMVC/signupModel.php';
     require_once 'signupMVC/signupContr.php';
 

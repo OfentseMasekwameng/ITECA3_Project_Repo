@@ -6,7 +6,7 @@ $isHttps = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on';
 
 session_set_cookie_params([
     'lifetime' => 1800,
-    'domain' => 'localhost',
+    'domain' => 'kickingdom.42web.io',
     'path' => '/',
     'secure' => $isHttps, // Change to true if using HTTPS
     'httponly' => true

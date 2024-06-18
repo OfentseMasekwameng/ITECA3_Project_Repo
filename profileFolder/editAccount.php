@@ -1,5 +1,5 @@
 <?php
-    include_once("includes/connection.php");
+    include_once("coverFolder/connection.php");
     require_once "./userfolder/signupMVC/signupContr.php";
     require_once "./userfolder/signupMVC/signupModel.php";
     require_once "userfolder/loginMVC/loginView.php";

@@ -1,5 +1,5 @@
 <?php
-require_once '../includes/configSession.inc.php';
+require_once '../coverFolder/configSession.inc.php';
 
 // displays errors
 ini_set('display_errors', 1);
@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     
     // Include necessary files
-    require_once '../includes/connection.php';
+    require_once '../coverFolder/connection.php';
     require_once 'loginMVC/loginModel.php';
     require_once 'loginMVC/loginContr.php';
     

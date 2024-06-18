@@ -1,6 +1,6 @@
 <?php
-include_once("includes/connection.php");
-include_once("includes/configSession.inc.php");
+include_once("coverFolder/connection.php");
+include_once("coverFolder/configSession.inc.php");
 include_once("functions/common.php");
 
 // Fetch reviews from the database

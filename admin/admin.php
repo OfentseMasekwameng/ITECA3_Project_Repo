@@ -14,6 +14,9 @@
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -74,9 +77,9 @@
                         <a href="admin.php?insert_product" class="contr_link"><button class="btn admin_btn">Insert Products</button></a>
                         <a href="admin.php?view_products" class="contr_link"><button class="btn admin_btn">View Products</button></a>
                         <a href="admin.php?insert_category" class="contr_link"><button class="admin_btn btn">Insert Categories</button></a>
-                        <a href="admin.php?view_cat.php" class="contr_link"><button class="btn admin_btn">View Categories</button></a>
+                        <a href="admin.php?view_category" class="contr_link"><button class="btn admin_btn">View Categories</button></a>
                         <a href="admin.php?insert_brands" class="contr_link"><button class="btn admin_btn">Insert Brands</button></a>
-                        <a href="admin.php?view_brands.php" class="contr_link"><button class="btn admin_btn">View Brands</button></a>
+                        <a href="admin.php?view_brands" class="contr_link"><button class="btn admin_btn">View Brands</button></a>
                         <a href="admin.php?orders.php" class="contr_link"><button class="btn admin_btn">All orders</button></a>
                         <a href="admin.php?all_payments.php" class="contr_link"><button class="btn admin_btn">All payments</button></a>
                         <a href="admin.php?LOU.php" class="contr_link"><button class="btn admin_btn">List of Users</button></a>
@@ -98,6 +101,30 @@
                     if (isset($_GET["view_products"])){
                         include("view_prod.php");
                     }
+                    if (isset($_GET["edit_products"])){
+                        include("editProducts.php");
+                    }
+                    if (isset($_GET["delete_products"])){
+                        include("deleteProducts.php");
+                    }
+                    if (isset($_GET["view_category"])){
+                        include("view_cat.php");
+                    }
+                    if (isset($_GET["view_brands"])){
+                        include("view_brands.php");
+                    }
+                    if (isset($_GET["edit_category"])){
+                        include("editCategory.php");
+                    }
+                    if (isset($_GET["edit_brand"])){
+                        include("editBrand.php");
+                    }
+                    if (isset($_GET["delete_category"])){
+                        include ("deleteCategory.php");
+                    }                        
+                    if (isset($_GET["delete_brand"])){
+                        include ("deleteBrand.php");
+                    }                           
                 ?>
             </div>
         </section>

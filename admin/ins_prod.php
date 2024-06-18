@@ -1,5 +1,5 @@
 <?php
-include('../includes/connection.php');
+include('../coverFolder/connection.php');
 
 
 
@@ -91,7 +91,7 @@ if (isset($_POST["insert_product"])){
                     echo '<option value="'.$brand_id.'">'.$brand_title.'</option>';
                 }
             ?>
-            </select>
+        </select>
     </div>
 
     <div class="img_selection">

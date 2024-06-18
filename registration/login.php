@@ -1,6 +1,6 @@
 <?php
-require_once '../includes/config_session.inc.php';
-require_once '../includes/login_mvc/login_view.inc.php';
+require_once '../coverFolder/config_session.inc.php';
+require_once '../coverFolder/login_mvc/login_view.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ require_once '../includes/login_mvc/login_view.inc.php';
     <div class="title">
         <h1>Login</h1>
     </div>
-    <form action="../includes/login.inc.php" method="post">
+    <form action="../coverFolder/login.inc.php" method="post">
         <div class="field">
             <input type="text" placeholder="Enter Email" name="email" id="email">
         </div>

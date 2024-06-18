@@ -1,5 +1,4 @@
 table{
-    transform: translate(-50%, -50%);
     width: 60%;
     border-collapse: collapse;
     border-radius: 12px 12px 0 0 ;
@@ -28,3 +27,15 @@ tbody tr:nth-child(odd){
     background-color: #e0e0e0;
 }
 
+.table_section{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image {
+    width: 100px;
+    height: auto;
+}
